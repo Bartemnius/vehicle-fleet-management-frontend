@@ -6,12 +6,12 @@ interface LoginFormProps {
 }
 
 const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
-  const [email, setEmail] = React.useState('');
+  const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit(email, password);
+    onSubmit(username, password);
   };
 
   return (
@@ -19,9 +19,9 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
       <label className={styles.label}>
         Email:
         <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          type="text"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
           className={styles.input}
         />
       </label>
