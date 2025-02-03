@@ -9,7 +9,7 @@ const Dashboard = () => {
     if (!token) {
       navigate('/login'); // 🔥 Jeśli nie ma tokena, wracamy do logowania
     }
-  }, []);
+  }, [navigate]);
 
   return (
     <div>
